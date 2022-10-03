@@ -138,7 +138,7 @@ if (thang==12) {
         console.log(`Ngay tiep theo la: 1/1/${nam +1}`);
     }   
 }
-if (thang==2&&leapYear(nam)==false) {
+if (thang==2&&namNhuan(nam)==false) {
     if (ngay<28) {
         console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
         console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
@@ -149,7 +149,7 @@ if (thang==2&&leapYear(nam)==false) {
         console.log("ngày nhập không hợp lệ");
     }
 }
-if (thang==2&&leapYear(nam)==true) {
+if (thang==2&&namNhuan(nam)==true) {
     if (ngay<29) {
         console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
         console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
