@@ -109,6 +109,9 @@ while (thang>12|| thang<=0|| Number.isInteger(thang) !=true) {
     thang=+prompt("nhap lai tháng")
 }
 let nam=+prompt("nhập vào năm")
+while (nam<=0|| Number.isInteger(nam) !=true) {
+    thang=+prompt("Nhập lại Năm")
+}
 let arr1=[1,3,5,7,8,10,12]
 let arr2=[4,6,9,11]
 if (arr1.indexOf(thang)!= -1&&thang!=12) {
