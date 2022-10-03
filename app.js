@@ -91,6 +91,7 @@ while (true) {
 */
 
 // BÀI 6
+/*
 let ngay=+prompt("nhap ngay ")
 while (ngay>31 || ngay<=0|| Number.isInteger(ngay) !=true) {
     ngay=+prompt("nhap lai ngay")
@@ -141,7 +142,7 @@ if (thang==2) {
         console.log("ngày nhập không hợp lệ");
     }
 }
-
+*/
 
 // BÀI 7
 /*
