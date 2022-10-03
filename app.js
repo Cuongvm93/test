@@ -92,6 +92,13 @@ while (true) {
 
 // BÀI 6
 /*
+var namNhuan = function(year){
+    if ((year % 4===0 &&year%100 !==0 && year % 400 !==0)||(year%100===0 && year % 400===0)){
+    return true;
+    } else{
+    return false;
+    }
+}
 let ngay=+prompt("nhap ngay ")
 while (ngay>31 || ngay<=0|| Number.isInteger(ngay) !=true) {
     ngay=+prompt("nhap lai ngay")
@@ -131,11 +138,22 @@ if (thang==12) {
         console.log(`Ngay tiep theo la: 1/1/${nam +1}`);
     }   
 }
-if (thang==2) {
+if (thang==2&&leapYear(nam)==false) {
     if (ngay<28) {
         console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
         console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
     } else if(ngay==28) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: 1/${thang+1}/${nam}`);
+    }   else{
+        console.log("ngày nhập không hợp lệ");
+    }
+}
+if (thang==2&&leapYear(nam)==true) {
+    if (ngay<29) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
+    } else if(ngay==29) {
         console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
         console.log(`Ngay tiep theo la: 1/${thang+1}/${nam}`);
     }   else{
