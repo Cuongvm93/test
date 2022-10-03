@@ -91,39 +91,56 @@ while (true) {
 */
 
 // BÀI 6
-let ngay= 31
-let thang=12
-let nam=1990
-let arr1=[1,3,5,7,8,10,12]
-let arr2=[4,6,9,11]
-if (ngay<=0&&ngay>31) {
-    console.log("bạn nhập sai ngày");
-}
-if (thang<=0&& thang>12) {
-    console.log("bạn nhập sai tháng");
-}
-if (ngay=31 && arr1.indexOf(thang)==-1) {
-    console.log("bạn nập sai tháng");
-    
-} if (ngay>28 && thang==2) {
-    console.log("bạn nhập sai ngày");
-}
-console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
-if (ngay==30&&arr2.indexOf(thang)!=-1) {
-    console.log(`ngay tiep theo la 1/${thang+1}/${nam}`);
-} else {
-     console.log(`ngay tiep theo la ${ngay+1}/${thang}/${nam}`);
-}
-if (ngay ==31&&arr1.indexOf(thang)!=-1&&thang!=7&& thang!=12) {
-    console.log(`ngay tiep theo la 1/${thang+1}/${nam}`) 
-}
-if (ngay==31&&thang==7) {
-    console.log(`ngay tiep theo la 1/8/${nam}`);
-    
-}if (ngay==31&&thang==12){
-   console.log(`ngay tiep theo la 1/1/${nam+1}`);
+let ngay=+prompt("nhap ngay ")
+while (ngay>31 || ngay<=0|| Number.isInteger(ngay) !=true) {
+    ngay=+prompt("nhap lai ngay")
 }
 
+let thang=+prompt("nhap tháng ")
+while (thang>12|| thang<=0|| Number.isInteger(thang) !=true) {
+    thang=+prompt("nhap lai ngay")
+}
+let nam=+prompt("nhập vào năm")
+let arr1=[1,3,5,7,8,10,12]
+let arr2=[4,6,9,11]
+if (arr1.indexOf(thang)!= -1&&thang!=12) {
+    if (ngay<31) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
+    } else {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: 1/${thang+1}/${nam}`);
+    }   
+}
+if (arr2.indexOf(thang)!= -1&&thang!=2) {
+    if (ngay<30) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
+    } else {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: 1/${thang+1}/${nam}`);
+    }   
+}
+if (thang==12) {
+    if (ngay<31) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
+    } else {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: 1/1/${nam +1}`);
+    }   
+}
+if (thang==2) {
+    if (ngay<28) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: ${ngay+1}/${thang}/${nam}`);
+    } else if(ngay==28) {
+        console.log(`${ngay}/${thang}/${nam} là hợp lệ`);
+        console.log(`Ngay tiep theo la: 1/${thang+1}/${nam}`);
+    }   else{
+        console.log("ngày nhập không hợp lệ");
+    }
+}
 
 
 // BÀI 7
