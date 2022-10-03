@@ -106,7 +106,7 @@ while (ngay>31 || ngay<=0|| Number.isInteger(ngay) !=true) {
 
 let thang=+prompt("nhap tháng ")
 while (thang>12|| thang<=0|| Number.isInteger(thang) !=true) {
-    thang=+prompt("nhap lai ngay")
+    thang=+prompt("nhap lai tháng")
 }
 let nam=+prompt("nhập vào năm")
 let arr1=[1,3,5,7,8,10,12]
