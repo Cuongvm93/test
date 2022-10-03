@@ -40,15 +40,18 @@ console.log(newarr);
 
 // BÀI 4
 /*
-let arr= [1,55,7,14,12,8,50,96]
+let input=prompt("Nhập vào chuỗi số cách nhau")
+let arr=input.split(" ")
+
 for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length-1; j++) {
-        if (arr[j]>arr[j+1]) {
+        if (Number(arr[j])>Number(arr[j+1])) {
             [arr[j],arr[j+1]]=[arr[j+1],arr[j]]    
         }
     
         
     }
+   
    
     
 }
