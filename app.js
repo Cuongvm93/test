@@ -133,11 +133,11 @@ while (true) {
    
    if(task=="c"){
 
-    let product = prompt("Please input your product");
+    let product = prompt("Nhập tên Sản phẩm");
     if (store.indexOf(product) === -1) {
-        console.log("We don't have that item")
+        console.log("Sản phẩm không có trong store")
     } else {
-        let number = +prompt("please input number");
+        let number = +prompt("nhập số lượng");
         let findIndex = -1;
         for (let i = 0; i <= cart.length - 1; i++) {
             if (cart[i][0] === product) {
@@ -173,7 +173,7 @@ while (true) {
     
 }
 
-        let answer = prompt("Do you want to continue shopping? (Y/N)")
+        let answer = prompt("Bạn muốn tiếp tục mua sắm không? (Y/N)")
         if(answer === "N") {
             break;
         }
